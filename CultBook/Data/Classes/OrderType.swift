@@ -8,7 +8,7 @@
 
 import Foundation
 
-fileprivate struct OrderItem {
+struct OrderItem {
     var quantity : Int
     var price : Double
     var book : Book
@@ -36,7 +36,7 @@ enum Situation{
 }
 
 class Order{
-    fileprivate var orderItems : [OrderItem]
+    var orderItems : [OrderItem]
     var number : Int
     var emissionDate : Date
     var paymentType : PaymentType

@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		570BB12C221F8C1200853DED /* DataLoaderStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570BB12B221F8C1200853DED /* DataLoaderStrings.swift */; };
 		57423CA9221A01D800E782C6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57423CA8221A01D800E782C6 /* main.swift */; };
+		57423CB1221A024700E782C6 /* BookType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57423CB0221A024700E782C6 /* BookType.swift */; };
+		57423CB3221A17C200E782C6 /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57423CB2221A17C200E782C6 /* OrderType.swift */; };
+		577592A6221E1926004BE5CE /* ClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577592A5221E1926004BE5CE /* ClientType.swift */; };
+		577592A9221E1E5E004BE5CE /* SalesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577592A8221E1E5E004BE5CE /* SalesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +28,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		57423CA5221A01D800E782C6 /* CultBook */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CultBook; sourceTree = BUILT_PRODUCTS_DIR; };
+		570BB12B221F8C1200853DED /* DataLoaderStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoaderStrings.swift; sourceTree = "<group>"; };
+		57423CA5221A01D800E782C6 /* CultBook */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = CultBook; sourceTree = BUILT_PRODUCTS_DIR; };
 		57423CA8221A01D800E782C6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		57423CB0221A024700E782C6 /* BookType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookType.swift; sourceTree = "<group>"; };
+		57423CB2221A17C200E782C6 /* OrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
+		577592A5221E1926004BE5CE /* ClientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientType.swift; sourceTree = "<group>"; };
+		577592A8221E1E5E004BE5CE /* SalesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		570BB12A221F8C0400853DED /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				570BB12B221F8C1200853DED /* DataLoaderStrings.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		57423C9C221A01D800E782C6 = {
 			isa = PBXGroup;
 			children = (
@@ -57,9 +75,30 @@
 		57423CA7221A01D800E782C6 /* CultBook */ = {
 			isa = PBXGroup;
 			children = (
+				570BB12A221F8C0400853DED /* Utils */,
+				57423CAF221A021100E782C6 /* Data */,
 				57423CA8221A01D800E782C6 /* main.swift */,
 			);
 			path = CultBook;
+			sourceTree = "<group>";
+		};
+		57423CAF221A021100E782C6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				577592A7221E1E48004BE5CE /* Classes */,
+				577592A8221E1E5E004BE5CE /* SalesManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		577592A7221E1E48004BE5CE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				57423CB0221A024700E782C6 /* BookType.swift */,
+				57423CB2221A17C200E782C6 /* OrderType.swift */,
+				577592A5221E1926004BE5CE /* ClientType.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +127,9 @@
 		57423C9D221A01D800E782C6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = RFSEnterprises;
@@ -119,6 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				577592A6221E1926004BE5CE /* ClientType.swift in Sources */,
+				570BB12C221F8C1200853DED /* DataLoaderStrings.swift in Sources */,
+				57423CB3221A17C200E782C6 /* OrderType.swift in Sources */,
+				577592A9221E1E5E004BE5CE /* SalesManager.swift in Sources */,
+				57423CB1221A024700E782C6 /* BookType.swift in Sources */,
 				57423CA9221A01D800E782C6 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +318,7 @@
 				57423CAB221A01D800E782C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		57423CAC221A01D800E782C6 /* Build configuration list for PBXNativeTarget "CultBook" */ = {
 			isa = XCConfigurationList;
@@ -280,7 +327,7 @@
 				57423CAE221A01D800E782C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

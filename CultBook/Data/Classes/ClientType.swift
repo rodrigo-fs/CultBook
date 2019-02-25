@@ -8,7 +8,7 @@
 
 import Foundation
 
-private struct Address{
+fileprivate struct Address{
     var street : String
     var number : Int
     var complement : String?
@@ -28,13 +28,15 @@ private struct Address{
     }
 }
 
-class Person {
+class Client {
     var name : String
     var login : String
     var password : String
     var email : String
     var phone : String
-    init(name : String, login : String, password : String, email : String, phone: String) {
+    fileprivate var address : Address
+    init(name : String, login : String, password : String, email : String, phone: String, street : String, number : Int, complement : String?, district : String, city : String, state: String, zipCode: String) {
+        self.address = Address(street: street, number: number, complement: complement, district: district, city: city, state: state, zipCode: zipCode)
         self.name = name
         self.login = login
         self.password = password

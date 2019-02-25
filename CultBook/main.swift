@@ -8,5 +8,58 @@
 
 import Foundation
 
-print("Hello, World!")
+
+let salesManager = SalesManager.sharedInstance
+var option : Int? = 0
+var innerOption : Int? = 0
+func showMenu() {
+    print(DataLoaderStrings.menuHeader.localized)
+    print(DataLoaderStrings.separator.localized)
+    print(DataLoaderStrings.option1.localized)
+    print(DataLoaderStrings.option2.localized)
+    print(DataLoaderStrings.option3.localized)
+    print(DataLoaderStrings.option4.localized)
+    print(DataLoaderStrings.option9.localized)
+}
+
+func showInvalidOptionMessage(){
+    print(DataLoaderStrings.invalidOption.localized)
+}
+
+func innerUserMenu(){
+    
+}
+
+while(option != 9){
+    showMenu()
+    if let response = readLine(){
+        if let aux = Int(response){
+            option = aux
+            switch option{
+                case 1:
+                    if var client = SalesManager.sharedInstance.loginHandler(){
+                        while(innerOption != 9){
+                            
+                        }
+                    }
+                case 2:
+                    SalesManager.sharedInstance.registerBookHandler()
+                case 3:
+                    print(3)
+                case 4:
+                    SalesManager.sharedInstance.showAllBooks()
+                case 9:
+                    print()
+                default:
+                    showInvalidOptionMessage()
+            }
+        }
+        else{
+            showInvalidOptionMessage()
+        }
+    }
+    else{
+        showInvalidOptionMessage()
+    }
+}
 
