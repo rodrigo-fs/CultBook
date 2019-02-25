@@ -20,6 +20,7 @@ enum DataLoaderStrings : String {
     case option9 = "9 - Exit"
     case invalidOption = "Invalid option"
     case endingProgram = "Ending Program"
+    case functionNotImplementedYet = "This fuction isn't implemented yet"
     //Login
     case informYourAccount = "Inform your account"
     case user = "User:"
@@ -32,7 +33,8 @@ enum DataLoaderStrings : String {
     //Register Book
     case registerBook = "Register Book"
     case informBookData = "Inform Book Data to Register"
-    case informBookType = "Inform Book Type"
+    case informBookType = "Inform Book Type"    
+    
     
     enum BookOptions : String, CaseIterable {
         case option1AudioBook = " 1 - AudioBook"

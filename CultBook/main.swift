@@ -26,6 +26,10 @@ func showInvalidOptionMessage(){
     print(DataLoaderStrings.invalidOption.localized)
 }
 
+func showNotImplementedYetMessage(){
+    print(DataLoaderStrings.functionNotImplementedYet.localized)
+}
+
 func innerUserMenu(){
     
 }
@@ -38,18 +42,20 @@ while(option != 9){
             switch option{
                 case 1:
                     if var client = SalesManager.sharedInstance.loginHandler(){
-                        while(innerOption != 9){
+                        print(DataLoaderStrings.functionNotImplementedYet.localized)
+                        //while(innerOption != 9){
                             
-                        }
+                        //}
                     }
                 case 2:
-                    SalesManager.sharedInstance.registerBookHandler()
+                    //SalesManager.sharedInstance.registerBookHandler()
+                    showNotImplementedYetMessage()
                 case 3:
-                    print(3)
+                    showNotImplementedYetMessage()
                 case 4:
                     SalesManager.sharedInstance.showAllBooks()
                 case 9:
-                    print()
+                    print(DataLoaderStrings.endingProgram.localized)
                 default:
                     showInvalidOptionMessage()
             }

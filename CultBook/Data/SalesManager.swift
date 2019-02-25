@@ -145,33 +145,40 @@ class SalesManager{
         }
     }
     
+    private func registerABook(){
+        print()
+    }
+    
     
     public func showAllBooks(){
         SeedData.books.forEach{
             switch($0.key.bookType) {
                 case "EBook":
-                    var aux = $0.value as! EBook
+                    let aux = $0.value as! EBook
                     printEbook(ebook: aux)
                 case "AudioBook":
-                    var aux = $0.value as! AudioBook
+                    let aux = $0.value as! AudioBook
                     printaBook(aBook: aux)
                 case "Book":
-                    printBook(book: $0.value)
+                    printBook(book: $0.value, firstCall: true)
                 default:
                     return
             }
         }
     }
  
-    private func printBook(book : Book){
+    private func printBook(book : Book, firstCall : Bool = false){
         print(DataLoaderStrings.bookTitle.localized + "\(book.title)")
         print(DataLoaderStrings.bookAuthor.localized + "\(book.author)")
         print(DataLoaderStrings.bookDescription.localized + "\(book.description)")
         print(DataLoaderStrings.bookIsbn.localized + "\(book.isbn)")
         print(DataLoaderStrings.bookPrice.localized + "\(book.price)")
         print(DataLoaderStrings.bookRegisterDate.localized + "\(printableDate(date: book.registerDate))")
+        if firstCall {
+            print("")
+        }
     }
-    
+
     
     private func printEbook(ebook : EBook){
         printBook(book: ebook)

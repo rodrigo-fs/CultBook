@@ -10,11 +10,6 @@ import Foundation
 
 
 
-protocol IBook{
-    
-}
-
-
 enum BooksCategory{
     case Action
     case Art
@@ -26,18 +21,32 @@ enum BooksCategory{
     case Mystery
     case Romance
     case Thriller
+    case Unknown
 }
 
-class Book : IBook
+class Book
 {
-    var title : String //{ get set }
-    var isbn : String //{ get set }
-    var description : String //{ get set }
-    var author : String //{ get set }
-    var stock : Int //{ get set }
-    var price : Double //{ get set }
-    var registerDate : Date //{ get }
-    var category : BooksCategory //{ get }
+    var title : String
+    var isbn : String
+    var description : String
+    var author : String 
+    var stock : Int
+    var price : Double
+    var registerDate : Date
+    var category : BooksCategory
+    
+    init(){
+        self.title = ""
+        self.title = ""
+        self.isbn = ""
+        self.description = ""
+        self.author = ""
+        self.stock = 0
+        self.price = 0
+        self.registerDate = Date()
+        self.category = .Unknown
+        
+    }
     
     init(title : String, isbn : String, description : String, author : String, stock : Int, price : Double, registerDate : Date, category: BooksCategory) {
         self.title = title
@@ -69,76 +78,47 @@ struct Duration {
 }
 
 class AudioBook : Book{
-    /*
-    var title: String
-    var isbn: String
-    var description: String
-    var author: String
-    var stock: Int
-    var price: Double
-    var registerDate: Date
-    var category: BooksCategory
- */
+
     var timeDuration : Duration
     var narrator : String
+    
+    override init(){
+        self.timeDuration = Duration(hours: 0, minutes: 0, seconds: 0)
+        self.narrator = ""
+        super.init()
+    }
     
     init(title : String, isbn : String, description : String, author: String, stock : Int, price : Double, registerDate : Date, category : BooksCategory, timeDuration: Duration, narrator : String) {
         self.timeDuration = timeDuration
         self.narrator = narrator
         super.init(title: title, isbn: isbn, description: description, author: author, stock: stock, price: price, registerDate: registerDate, category: category)
-        /*
-        self.title = title
-        self.isbn = isbn
-        self.description = description
-        self.author = author
-        self.stock = stock
-        self.price = price
-        self.registerDate = registerDate
-        self.category = category
-         */
     }
 }
 
 enum ArchieveType{
     case pdf
     case doc
+    case Unknown
 }
 
 
 class EBook : Book{
-    /*
-    var title: String
-    var isbn: String
-    var description: String
-    var author: String
-    var stock: Int
-    var price: Double
-    var registerDate: Date
-    var category: BooksCategory
- */
+
     var size : Int
     var downloadAddress : String
     var type : ArchieveType
     
+    override init(){
+        self.size = 0
+        self.downloadAddress = ""
+        self.type = .Unknown
+        super.init()
+    }
+    
     init(title : String, isbn : String, description : String, author: String, stock : Int, price : Double, registerDate : Date, category : BooksCategory, size : Int, downloadAddress : String, type : ArchieveType) {
-        /*
-        self.title = title
-        self.isbn = isbn
-        self.description = description
-        self.author = author
-        self.stock = stock
-        self.price = price
-        self.registerDate = registerDate
-        self.category = category
-        */
         self.size = size
         self.downloadAddress = downloadAddress
         self.type = type
         super.init(title: title, isbn: isbn, description: description, author: author, stock: stock, price: price, registerDate: registerDate, category: category)
     }
-    /*
-    func test (){
-        self.properties
-    }
- */
 }
